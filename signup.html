@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+   form{
+	   background-color: white;
+	   width: 300px;
+	   border: 15px solid grey;
+	   padding: 50px;
+	   margin: 20px;
+   }
+   body {
+      font-family: Open Sans;
+      color: black;
+	  
+   }
+   h1{
+      padding:20px;
+   }
+   .left,.right {
+      height: 100%;
+      width: 50%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      overflow-x: hidden;
+      padding-top: 20px;
+   }
+   .left {
+      left: 0;
+      
+   }
+   .right {
+      right: 0;
+      ;
+   }
+   .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+   }
+   .centered img {
+      width: 150px;
+      border-radius: 50%;
+	  
+   }
+   .button {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+.button:hover {
+  background-color: #f1f1f1;
+}
+
+</style
+<script src="java.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="left">
+
+<img src="office.jpg" width="539" height="414">
+</div>
+<div class="right" align="center">
+<h2 align="center">sign up</h2>
+ <form onsubmit="return(validate())">
+ <label><b>Name</b></label>
+    <input type="text" placeholder="Name"  name="Name" required><br><br>
+ <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" onchange="validateEmail();" name="Email" required><br><br>
+<label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required><br><br>
+
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label><br><br>
+
+    <button type="submit" class="button">create an account</button>
+
+ </form>
+</div>
+</body>
+</html>
